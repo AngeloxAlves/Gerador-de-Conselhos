@@ -19,6 +19,7 @@
   --btn-bg: #52dda8; /* Verde menta vibrante (se destaca muito) */
   --btn-text: #0f172a; /* Texto escuro para contraste no botão */
   --btn-hover: #34d399; /* Verde levemente mais escuro ao passar o mouse */
+  --btn-active: #25815f;
 }
 
 body {
@@ -33,4 +34,52 @@ body {
 }
 
 .advice_section {
+  background-color: var(--bg-primary);
+  padding: 3em 2em;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+h1 {
+  color: var(--text-secondary);
+  font-size: 42px;
+  line-height: 150%;
+}
+
+.advice {
+  color: var(--text-primary);
+}
+
+.advice_indicator {
+  color: var(--text-secondary);
+  font-size: 20px;
+}
+
+button {
+  color: var(--btn-text);
+  font-family: inherit;
+  background-color: var(--btn-bg);
+  padding: 10px 8px;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--btn-active);
+}
+
+.hidden {
+  display: none;
 }
