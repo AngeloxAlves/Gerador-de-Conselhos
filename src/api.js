@@ -4,7 +4,16 @@ const api = {
   async buscarConselho() {
     try {
       const response = await fetch(URL_BASE);
-      return await response.json();
+      const data = await response.json();
+      const conselhoIngles = await data.slip.advice;
+
+      const urlTraducao = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(conselhoIngles)}&langpair=en|pt-BR`;
+      const resTraducao = await fetch(urlTraducao);
+      const dataTraducao = await resTraducao.json();
+
+      data.slip.advice = dataTraducao.responseData.translatedText;
+
+      return data;
     } catch (error) {
       alert("Erro ao buscar um conselho");
       throw error;
