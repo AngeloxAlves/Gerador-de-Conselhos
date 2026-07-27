@@ -24,7 +24,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("/public/background-img.jpg");
+  background: url("/background-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

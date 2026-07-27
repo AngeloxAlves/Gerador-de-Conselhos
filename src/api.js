@@ -5,7 +5,7 @@ const api = {
     try {
       const response = await fetch(URL_BASE);
       const data = await response.json();
-      const conselhoIngles = await data.slip.advice;
+      const conselhoIngles = data.slip.advice;
 
       const urlTraducao = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(conselhoIngles)}&langpair=en|pt-BR`;
       const resTraducao = await fetch(urlTraducao);
